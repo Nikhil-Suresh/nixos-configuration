@@ -24,6 +24,7 @@
     discord
     firefox
     neovim
+    nerdfonts
     qutebrowser
     ripgrep
     slack
