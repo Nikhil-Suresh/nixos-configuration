@@ -30,11 +30,11 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  # Set hyprland as my desktop environment.
   programs.hyprland = {
   enable = true;
   xwayland.enable = true;
   };
-
   programs.sway.enable = true;
 
   # Set your time zone.
@@ -62,7 +62,8 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowUnfreePredicate = (_: true);
-  
+ 
+  # Graphics. 
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.graphics = {
   enable = true;
@@ -73,6 +74,11 @@
   modesetting.enable = true;
   nvidiaSettings = true;
   };
+  
+  # Gaming
+  programs.steam.enable = true;
+  programs.steam.gamescopeSession.enable = true;
+  programs.gamemode.enable = true;
 
   # List packages installed in system profile. To search, run: $ nix search wget
   environment.systemPackages = with pkgs; [
