@@ -56,10 +56,12 @@
     users = {
       "nik" = import ./home.nix;
     };
+    useGlobalPkgs = true;
 };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowUnfreePredicate = (_: true);
   
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.graphics = {
@@ -75,14 +77,12 @@
   # List packages installed in system profile. To search, run: $ nix search wget
   environment.systemPackages = with pkgs; [
     alacritty
-    firefox
     git
     home-manager
     kitty
     libnotify
     mako
     networkmanagerapplet
-    qutebrowser
     rofi-wayland
     swww
     vim 
