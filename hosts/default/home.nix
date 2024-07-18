@@ -25,6 +25,7 @@
     firefox
     neovim
     nerdfonts
+    pavucontrol
     qutebrowser
     ripgrep
     slack
