@@ -40,7 +40,7 @@
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.nik = { isNormalUser = true; description = "Nikhil Suresh"; extraGroups = [ "networkmanager" "wheel" ]; packages = with pkgs; [];
+  users.users.nik = { isNormalUser = true; description = "Nikhil Suresh"; extraGroups = [ "networkmanager" "wheel" "gamemode" ]; packages = with pkgs; [];
   };
 
   home-manager = {
