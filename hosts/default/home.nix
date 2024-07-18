@@ -22,6 +22,7 @@
     bitwarden-desktop
     bitwarden-cli
     discord
+    dolphin
     firefox
     neovim
     nerdfonts
