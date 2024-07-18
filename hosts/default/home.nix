@@ -83,6 +83,8 @@
   #  /etc/profiles/per-user/nik/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
+    STEAM_EXTRA_COMPAT_TOOLS_PATHS =
+      "\${HOME}/.steam/root/compatibilitytools.d";
     # EDITOR = "emacs";
   };
 

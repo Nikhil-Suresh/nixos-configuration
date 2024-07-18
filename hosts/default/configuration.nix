@@ -79,6 +79,7 @@
     libnotify
     mako
     networkmanagerapplet
+    protonup
     rofi-wayland
     swww
     vim 
