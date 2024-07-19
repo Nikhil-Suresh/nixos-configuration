@@ -24,7 +24,6 @@
     discord
     dolphin
     firefox
-    neovim
     nerdfonts
     pavucontrol
     qutebrowser
