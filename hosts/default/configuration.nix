@@ -10,7 +10,7 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true; boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "runesmith"; # Define your hostname.
 
   # Configure keymap in X11
   services.xserver = {
