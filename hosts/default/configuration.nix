@@ -25,9 +25,8 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
-  # Leftover from original setup, not sure if sway needs to be enabled.
+  # Enable Hyprland as an option in SDDM.
   programs.hyprland.enable = true;
-  programs.sway.enable = true;
 
   # Set your time zone.
   time.timeZone = "Australia/Melbourne";
