@@ -119,4 +119,30 @@
 
   # Enable bluetooth.
   hardware.bluetooth.enable = true;
+
+  # Enable stylix.
+    stylix.base16Scheme = {
+    base00 = "3c3836";
+    base01 = "3c3836";
+    base02 = "3c3836";
+    base03 = "665c54";
+    base04 = "bdae93";
+    base05 = "d5c4a1";
+    base06 = "ebdbb2";
+    base07 = "fbf1c7";
+    base08 = "fb4934";
+    base09 = "fe8019";
+    base0A = "fabd2f";
+    base0B = "d65d0e";
+    base0C = "8ec07c";
+    base0D = "83a598";
+    base0E = "d3869b";
+    base0F = "d65d0e";
+  };
+  
+  # Don't forget to apply wallpaper
+  
+  stylix.image = ../../modules/home-manager/wallpaper.jpg;
+  stylix.enable = true;
+  stylix.opacity.terminal = 0.8;
 }
