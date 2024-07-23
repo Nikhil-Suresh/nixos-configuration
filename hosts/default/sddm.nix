@@ -2,7 +2,7 @@
 {
   services.displayManager.sddm = {
   enable = true;
-  theme = "Maldives";
+  theme = "${import ../../modules/sddm-theme/sddm-theme.nix {inherit pkgs; }}";
   };
 }
 

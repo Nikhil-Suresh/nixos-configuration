@@ -76,6 +76,7 @@
     git
     home-manager
     libnotify
+    libsForQt5.qt5.qtgraphicaleffects
     mako
     networkmanagerapplet
     protonup
