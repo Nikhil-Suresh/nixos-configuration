@@ -110,6 +110,9 @@
     jack.enable = true;
   };
 
+  # Enable the SSH agent on every startup.
+  programs.ssh.startAgent = true;
+
   # Enable printing.
   services.printing.enable = true;
 
