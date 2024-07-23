@@ -119,8 +119,9 @@ master {
 
 # https://wiki.hyprland.org/Configuring/Variables/#misc
 misc { 
-    force_default_wallpaper = -1 # Set to 0 or 1 to disable the anime mascot wallpapers
-    disable_hyprland_logo = false # If true disables the random hyprland logo / anime girl background. :(
+    force_default_wallpaper = 0 # Set to 0 or 1 to disable the anime mascot wallpapers
+    disable_hyprland_logo = true # If true disables the random hyprland logo / anime girl background. :(
+    disable_splash_rendering = true # Get rid of the annoying quotes!
 }
 
 
@@ -243,5 +244,8 @@ windowrulev2 = suppressevent maximize, class:.* # You'll probably like this.
 ###     FIRST LAUNCH     ###
 ############################
 
-exec-once=bash ~/.config/hypr/start.sh
+exec-once=nm-applet --indicator
+exec-once=waybar
+exec-once=swww-daemon
+exec-once=swww img ./wallpaper.jpg
 "
