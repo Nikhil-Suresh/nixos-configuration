@@ -30,6 +30,7 @@
     ripgrep
     slack
     spotify
+    unzip
     vscode
   ];
   
