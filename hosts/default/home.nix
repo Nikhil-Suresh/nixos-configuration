@@ -3,7 +3,8 @@
 {
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
-    ../../modules/home-manager
+    ../../modules/home-manager/alacritty.nix
+    ../../modules/home-manager/nixvim.nix
   ];
 
   home.username = "nik";
@@ -17,7 +18,6 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-    alacritty
     bitwarden-desktop
     bitwarden-cli
     discord
