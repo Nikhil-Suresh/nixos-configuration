@@ -5,6 +5,7 @@
     inputs.nixvim.homeManagerModules.nixvim
     ../../modules/home-manager/alacritty.nix
     ../../modules/home-manager/nixvim.nix
+    ../../modules/home-manager/waybar.nix
   ];
 
   home.username = "nik";
