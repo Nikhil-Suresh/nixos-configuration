@@ -32,6 +32,7 @@
     spotify
     unzip
     vscode
+    wl-clipboard
   ];
   
   wayland.windowManager.hyprland = {
