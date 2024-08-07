@@ -108,10 +108,6 @@
     unzip
     vim 
     vscode
-    (waybar.overrideAttrs (oldAttrs: {
-      mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
-     })
-    )
     wineWowPackages.stable
     wl-clipboard
   ];
