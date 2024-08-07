@@ -13,15 +13,15 @@ programs.alacritty = {
 	scrolling.history = 1000;
 	font = {
           normal = {
-            family = "JetBrains Mono Nerd Font";
+            family = "Terminess Nerd Font Mono";
             style = "Regular";
         };
         bold = {
-          family = "JetBrains Mono Nerd Font";
+          family = "Terminess Nerd Font Mono";
         style = "Bold";
         };
         italic = {
-          family = "JetBrains Mono Nerd Font";
+          family = "Terminess Nerd Font Mono";
           style = "Italic";
         };
         size = 18;

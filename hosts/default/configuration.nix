@@ -94,7 +94,6 @@
     libnotify
     libsForQt5.qt5.qtgraphicaleffects
     mako
-    nerdfonts
     networkmanagerapplet
     pavucontrol
     protonup
@@ -112,6 +111,10 @@
      })
     )
     wl-clipboard
+  ];
+
+  fonts.packages = with pkgs; [
+    terminus-nerdfont  
   ];
 
   xdg.portal.enable = true;
