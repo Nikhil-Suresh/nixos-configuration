@@ -17,6 +17,18 @@
     enable = true;
     xkb.layout = "au";
     xkb.variant = "";
+    desktopManager = {
+      xterm.enable = false;
+    };
+    windowManager.i3 = {
+      enable = true;
+      extraPackages = with pkgs; [
+        dmenu
+	i3status
+	i3lock
+	i3blocks
+      ];
+    };
   };
 
   # Enable flakes
@@ -73,20 +85,33 @@
 
   # List packages installed in system profile. To search, run: $ nix search wget
   environment.systemPackages = with pkgs; [
+    discord
+    dolphin
+    feh
+    firefox
     git
     home-manager
     libnotify
     libsForQt5.qt5.qtgraphicaleffects
     mako
+    nerdfonts
     networkmanagerapplet
+    pavucontrol
     protonup
+    qutebrowser
+    ripgrep
     rofi-wayland
+    slack
+    spotify
     swww
+    unzip
     vim 
+    vscode
     (waybar.overrideAttrs (oldAttrs: {
       mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
      })
     )
+    wl-clipboard
   ];
 
   xdg.portal.enable = true;

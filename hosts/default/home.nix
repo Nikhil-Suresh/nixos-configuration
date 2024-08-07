@@ -19,20 +19,6 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-    bitwarden-desktop
-    bitwarden-cli
-    discord
-    dolphin
-    firefox
-    nerdfonts
-    pavucontrol
-    qutebrowser
-    ripgrep
-    slack
-    spotify
-    unzip
-    vscode
-    wl-clipboard
   ];
   
   wayland.windowManager.hyprland = {
