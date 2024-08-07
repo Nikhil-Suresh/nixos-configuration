@@ -37,9 +37,6 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
-  # Enable Hyprland as an option in SDDM.
-  programs.hyprland.enable = true;
-
   # Set your time zone.
   time.timeZone = "Australia/Melbourne";
 
@@ -98,6 +95,7 @@
     libnotify
     libsForQt5.qt5.qtgraphicaleffects
     mako
+    neovim
     networkmanagerapplet
     pavucontrol
     protonup
