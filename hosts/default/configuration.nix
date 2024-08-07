@@ -89,8 +89,10 @@
     dolphin
     feh
     firefox
+    fish
     git
     home-manager
+    jump
     libnotify
     libsForQt5.qt5.qtgraphicaleffects
     mako

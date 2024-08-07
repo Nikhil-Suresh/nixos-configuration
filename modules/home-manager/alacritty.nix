@@ -26,6 +26,7 @@ programs.alacritty = {
         };
         size = 18;
       };
+        shell.program = "fish";
     };
   };
 }
