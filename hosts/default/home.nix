@@ -2,10 +2,7 @@
 
 {
   imports = [
-    inputs.nixvim.homeManagerModules.nixvim
     ../../modules/home-manager/alacritty.nix
-    ../../modules/home-manager/nixvim.nix
-    ../../modules/home-manager/waybar.nix
   ];
 
   home.username = "nik";
@@ -21,12 +18,6 @@
   home.packages = with pkgs; [
   ];
   
-  wayland.windowManager.hyprland = {
-    enable = true;
-    package = inputs.hyprland.packages.${pkgs.system}.default;
-    extraConfig = (import ../../modules/home-manager/hyprland.nix);
-  };
-
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
