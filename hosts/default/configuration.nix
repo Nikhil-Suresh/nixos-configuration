@@ -31,6 +31,8 @@
     };
   };
 
+  networking.nameservers = ["1.1.1.1" "8.8.8.8"];
+
   # Enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -84,6 +86,7 @@
   environment.systemPackages = with pkgs; [
     bitwarden-cli
     bitwarden-desktop
+    clang
     discord
     dolphin
     feh
@@ -146,4 +149,7 @@
 
   # Enable bluetooth.
   hardware.bluetooth.enable = true;
+
+  # Try a different DNS thingo.
+  services.resolved.enable = true;
 }
