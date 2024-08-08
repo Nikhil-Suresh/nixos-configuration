@@ -102,6 +102,7 @@
     neovim
     networkmanagerapplet
     pavucontrol
+    pinta
     polybarFull
     protonup
     qutebrowser
