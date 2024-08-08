@@ -152,4 +152,7 @@
 
   # Try a different DNS thingo.
   services.resolved.enable = true;
+
+  # Flatpak.
+  services.flatpak.enable = true;
 }
