@@ -102,7 +102,6 @@
     lua
     lua-language-server
     mako
-    neovim
     networkmanagerapplet
     nodejs_22
     pavucontrol
@@ -117,6 +116,7 @@
     spotify
     swww
     unzip
+    via
     vim 
     vscode
     wineWowPackages.stable
@@ -126,6 +126,13 @@
   fonts.packages = with pkgs; [
     terminus-nerdfont  
   ];
+
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+    viAlias = true;
+    vimAlias = true;
+  };
 
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
