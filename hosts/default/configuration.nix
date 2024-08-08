@@ -1,14 +1,21 @@
-{ config, pkgs, inputs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
-{ imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ./sddm.nix
-      inputs.home-manager.nixosModules.default
-    ];
+{
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    ./sddm.nix
+    inputs.home-manager.nixosModules.default
+  ];
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = true; boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "runesmith"; # Define your hostname.
 
@@ -24,17 +31,23 @@
       enable = true;
       extraPackages = with pkgs; [
         dmenu
-	i3status
-	i3lock
-	i3blocks
+        i3status
+        i3lock
+        i3blocks
       ];
     };
   };
 
-  networking.nameservers = ["1.1.1.1" "8.8.8.8"];
+  networking.nameservers = [
+    "1.1.1.1"
+    "8.8.8.8"
+  ];
 
   # Enable flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -45,50 +58,67 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "en_AU.UTF-8";
 
-  i18n.extraLocaleSettings = { LC_ADDRESS = "en_AU.UTF-8"; LC_IDENTIFICATION = "en_AU.UTF-8"; LC_MEASUREMENT = "en_AU.UTF-8"; LC_MONETARY = "en_AU.UTF-8"; LC_NAME = "en_AU.UTF-8"; LC_NUMERIC = "en_AU.UTF-8"; LC_PAPER = 
-    "en_AU.UTF-8"; LC_TELEPHONE = "en_AU.UTF-8"; LC_TIME = "en_AU.UTF-8";
+  i18n.extraLocaleSettings = {
+    LC_ADDRESS = "en_AU.UTF-8";
+    LC_IDENTIFICATION = "en_AU.UTF-8";
+    LC_MEASUREMENT = "en_AU.UTF-8";
+    LC_MONETARY = "en_AU.UTF-8";
+    LC_NAME = "en_AU.UTF-8";
+    LC_NUMERIC = "en_AU.UTF-8";
+    LC_PAPER = "en_AU.UTF-8";
+    LC_TELEPHONE = "en_AU.UTF-8";
+    LC_TIME = "en_AU.UTF-8";
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.nik = { isNormalUser = true; description = "Nikhil Suresh"; extraGroups = [ "networkmanager" "wheel" "gamemode" ]; packages = with pkgs; [];
+  users.users.nik = {
+    isNormalUser = true;
+    description = "Nikhil Suresh";
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "gamemode"
+    ];
+    packages = with pkgs; [ ];
   };
 
   home-manager = {
-    extraSpecialArgs = { inherit inputs; };
+    extraSpecialArgs = {
+      inherit inputs;
+    };
     users = {
       "nik" = import ./home.nix;
     };
     useGlobalPkgs = true;
-};
+  };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowUnfreePredicate = (_: true);
- 
+
   # Graphics. 
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.graphics = {
-  enable = true;
-  enable32Bit = true;
+    enable = true;
+    enable32Bit = true;
   };
-  
+
   hardware.nvidia = {
-  modesetting.enable = true;
-  nvidiaSettings = true;
+    modesetting.enable = true;
+    nvidiaSettings = true;
   };
-  
+
   # Gaming
   programs.steam.enable = true;
   programs.steam.gamescopeSession.enable = true;
   programs.gamemode.enable = true;
-  
+
   # Help with non-Nix binaries for Neovim.
   programs.nix-ld.enable = true;
-  programs.nix-ld.libraries = with pkgs;[
+  programs.nix-ld.libraries = with pkgs; [
     lua-language-server
     ruff
   ];
-
 
   # List packages installed in system profile. To search, run: $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -124,15 +154,13 @@
     swww
     unzip
     via
-    vim 
+    vim
     vscode
     wineWowPackages.stable
     wl-clipboard
   ];
 
-  fonts.packages = with pkgs; [
-    terminus-nerdfont  
-  ];
+  fonts.packages = with pkgs; [ terminus-nerdfont ];
 
   programs.neovim = {
     enable = true;
@@ -147,7 +175,7 @@
   # It‘s perfectly fine and recommended to leave this value at the 
   # release version of the first install of this system. Before changing this value read the documentation for this option (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
-  
+
   # Required for electron apps.
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";

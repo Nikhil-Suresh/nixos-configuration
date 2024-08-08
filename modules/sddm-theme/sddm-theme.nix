@@ -1,7 +1,7 @@
 { pkgs }:
 
 let
-  image = ./sddm_login_image.jpg; 
+  image = ./sddm_login_image.jpg;
 in
 pkgs.stdenv.mkDerivation {
   name = "sddm-theme";
@@ -17,5 +17,5 @@ pkgs.stdenv.mkDerivation {
     cd $out/
     rm Background.jpg
     cp -r ${image} $out/Background.jpg
-   '';
+  '';
 }
