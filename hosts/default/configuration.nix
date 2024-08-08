@@ -92,6 +92,7 @@
     feh
     firefox
     fish
+    flameshot
     git
     home-manager
     jump
@@ -101,6 +102,7 @@
     neovim
     networkmanagerapplet
     pavucontrol
+    polybarFull
     protonup
     qutebrowser
     ripgrep
