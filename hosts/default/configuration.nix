@@ -101,6 +101,7 @@
     mako
     neovim
     networkmanagerapplet
+    nodejs_22
     pavucontrol
     pinta
     polybarFull
