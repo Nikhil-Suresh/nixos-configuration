@@ -86,6 +86,7 @@
   environment.systemPackages = with pkgs; [
     bitwarden-cli
     bitwarden-desktop
+    cargo
     clang
     discord
     dolphin
@@ -98,6 +99,8 @@
     jump
     libnotify
     libsForQt5.qt5.qtgraphicaleffects
+    lua
+    lua-language-server
     mako
     neovim
     networkmanagerapplet
@@ -106,6 +109,7 @@
     pinta
     polybarFull
     protonup
+    python3
     qutebrowser
     ripgrep
     rofi-wayland
