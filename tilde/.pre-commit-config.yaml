@@ -1,0 +1,157 @@
+---
+# Configuration file for pre-commit (https://pre-commit.com/).
+# Please run `pre-commit run --all-files` when adding or changing entries.
+
+repos:
+  - repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
+    rev: 8ced6191809ced6507e325768a1d75fcc96cb568 # frozen: v2.9.0
+    hooks:
+      - id: pretty-format-ini
+        args: [--autofix]
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: f71fa2c1f9cf5cb705f73dffe4b21f7c61470ba9 # frozen: v4.4.0
+    hooks:
+      - id: pretty-format-json
+        args: [--autofix]
+      - id: pretty-format-json
+        args: [--autofix]
+        files: ^\.config/mcomix/.*\.conf$
+        types: []
+
+  - repo: https://gitlab.com/engmark/sort-hook
+    rev: 0a02a53300766e593f17f5cb4670ee8eb208bd81 # frozen: v2
+    hooks:
+      - id: sort
+        args: [--locale=en_NZ.UTF-8]
+        files: ^(.*/\.gitignore|\.bash_history|\.config/darktable/(keyboardrc|shortcutsrc|shortcutsrc\.defaults))$
+        exclude: ^\.config/\.gitignore$
+        stages: [commit]
+
+  - repo: local
+    hooks:
+      - id: nixfmt
+        name: nixfmt
+        entry: nixfmt
+        files: \.nix$
+        language: system
+        stages: [commit]
+
+      - id: bash
+        name: bash
+        entry: bash
+        args: [-o, noexec]
+        types: [bash]
+        language: system
+        stages: [commit]
+
+      # TODO: Remove if https://github.com/pre-commit/identify/issues/350 is fixed
+      - id: bash_other
+        name: bash other
+        entry: bash
+        args: [-o, noexec]
+        files: ^\.(bash_history|envrc|profile)
+        language: system
+        stages: [commit]
+
+      - id: check-gitlab-ci
+        name: check-gitlab-ci
+        entry: check-jsonschema
+        args: [--builtin-schema, vendor.gitlab-ci, --data-transform, gitlab-ci]
+        files: ^\.gitlab-ci.yml$
+        language: system
+        stages: [commit]
+
+      - id: deadnix
+        name: deadnix
+        entry: deadnix
+        args: [--edit, --fail]
+        files: \.nix$
+        exclude: ^nix/sources\.nix$
+        language: system
+        stages: [commit]
+
+      - id: editorconfig-checker
+        name: Check .editorconfig rules
+        entry: editorconfig-checker
+        types: [text]
+        require_serial: true
+        language: system
+        stages: [commit]
+
+      - id: gitlint
+        name: gitlint
+        entry: gitlint
+        args: [--fail-without-commits, --staged, --msg-filename]
+        language: system
+        stages: [commit-msg]
+
+      - id: pathchk
+        name: pathchk
+        entry: pathchk
+        args: [--portability]
+        exclude: ^(\.pre-commit-config\.yaml|\.config/(digikam_systemrc|mcomix/(keybindings|preferences)\.conf|darktable/(shortcutsrc\.defaults|styles/.*\.dtstyle)))$
+        language: system
+        stages: [commit]
+
+      - id: prettier
+        name: Prettier
+        entry: prettier
+        args: [--ignore-unknown, --list-different, --write]
+        types: [text]
+        language: system
+        stages: [commit]
+
+      - id: shellcheck
+        name: shellcheck
+        entry: shellcheck
+        args: [--external-sources]
+        types: [shell]
+        language: system
+        stages: [commit]
+
+      # TODO: Remove if https://github.com/pre-commit/identify/issues/350 is fixed
+      - id: shellcheck_other
+        name: shellcheck other
+        entry: shellcheck
+        args: [--external-sources]
+        files: ^\.envrc$
+        language: system
+        stages: [commit]
+
+      - id: shfmt
+        name: Format bash shell scripts
+        entry: shfmt
+        args: [--case-indent, --indent=4, --list, --space-redirects, --write]
+        types: [shell]
+        language: system
+        stages: [commit]
+
+      # TODO: Remove if https://github.com/pre-commit/identify/issues/350 is fixed
+      - id: shfmt
+        name: Format bash shell scripts
+        entry: shfmt
+        args: [--case-indent, --indent=4, --list, --space-redirects, --write]
+        files: ^\.envrc$
+        language: system
+        stages: [commit]
+
+      - id: statix
+        name: statix
+        entry: statix
+        args: [check]
+        files: \.nix$
+        pass_filenames: false
+        language: system
+        stages: [commit]
+
+  - repo: https://gitlab.com/engmark/shellcheck-gitlab-ci-scripts-hook
+    rev: 174fda8f384db229aca5b40380e713d0c25a1cb9 # frozen: v1
+    hooks:
+      - id: shellcheck-gitlab-ci-scripts
+        files: ^\.gitlab-ci\.yml$
+# TODO: Re-enable when https://github.com/NixOS/nixpkgs/issues/270805 is fixed
+#  - repo: meta
+#    hooks:
+#      - id: check-hooks-apply
+#      - id: check-useless-excludes

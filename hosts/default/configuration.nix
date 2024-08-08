@@ -81,6 +81,14 @@
   programs.steam.enable = true;
   programs.steam.gamescopeSession.enable = true;
   programs.gamemode.enable = true;
+  
+  # Help with non-Nix binaries for Neovim.
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs;[
+    lua-language-server
+    ruff
+  ];
+
 
   # List packages installed in system profile. To search, run: $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -100,7 +108,6 @@
     libnotify
     libsForQt5.qt5.qtgraphicaleffects
     lua
-    lua-language-server
     mako
     networkmanagerapplet
     nodejs_22

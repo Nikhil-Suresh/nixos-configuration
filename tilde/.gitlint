@@ -1,0 +1,16 @@
+# Configuration file for gitlint, used via pre-commit
+# Configuration docs: http://jorisroovers.github.io/gitlint/configuration/
+# Default rules: https://github.com/jorisroovers/gitlint/blob/master/docs/rules.md
+
+[general]
+ignore = body-is-missing
+
+# Enable community contributed rule for conventional commits
+contrib = contrib-title-conventional-commits
+
+[title-max-length]
+line-length = 72
+
+[contrib-title-conventional-commits]
+# Specify allowed commit types. For details see: https://www.conventionalcommits.org/
+types = build, chore, ci, docs, feat, fix, perf, refactor, revert, style, test
