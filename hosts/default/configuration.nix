@@ -135,6 +135,7 @@
     git
     home-manager
     jump
+    keymapp
     libreoffice-still
     libnotify
     libsForQt5.qt5.qtgraphicaleffects
