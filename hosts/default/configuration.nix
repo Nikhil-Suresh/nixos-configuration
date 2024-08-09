@@ -139,6 +139,8 @@
     libreoffice-still
     libnotify
     libsForQt5.qt5.qtgraphicaleffects
+    libsForQt5.breeze-icons
+    libsForQt5.konsole
     lua
     mako
     networkmanagerapplet
