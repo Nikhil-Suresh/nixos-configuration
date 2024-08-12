@@ -167,7 +167,7 @@
     xsel
   ];
 
-  fonts.packages = with pkgs; [ terminus-nerdfont ];
+  fonts.packages = with pkgs; [ terminus-nerdfont font-awesome ];
 
   programs.neovim = {
     enable = true;
