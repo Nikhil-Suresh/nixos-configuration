@@ -160,7 +160,7 @@
     via
     vim
     vscode
-    wineWowPackages.stable
+    winetricks
     wl-clipboard
   ];
 
