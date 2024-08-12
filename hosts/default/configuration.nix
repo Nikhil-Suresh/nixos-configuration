@@ -163,7 +163,8 @@
     vim
     vscode
     winetricks
-    wl-clipboard
+    xclip
+    xsel
   ];
 
   fonts.packages = with pkgs; [ terminus-nerdfont ];
