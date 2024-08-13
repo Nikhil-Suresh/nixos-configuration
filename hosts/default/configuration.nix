@@ -135,6 +135,7 @@
     fish
     flameshot
     git
+    google-chrome
     home-manager
     jump
     keymapp
