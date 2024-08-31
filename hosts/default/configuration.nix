@@ -126,6 +126,7 @@
   environment.systemPackages = with pkgs; [
     bitwarden-cli
     bitwarden-desktop
+    cachix
     cargo
     clang
     discord
@@ -135,6 +136,7 @@
     fish
     flameshot
     git
+    go
     google-chrome
     home-manager
     jump
