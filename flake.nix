@@ -13,14 +13,28 @@
   outputs =
     { self, nixpkgs, ... }@inputs:
     {
-      nixosConfigurations.default = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.runesmith = nixpkgs.lib.nixosSystem {
         specialArgs = {
           inherit inputs;
         };
         modules = [
-          ./hosts/default/configuration.nix
+          ./hosts/common_configuration.nix
+          ./hosts/runesmith/configuration.nix
+          ./hosts/runesmith/hardware-configuration.nix
           inputs.home-manager.nixosModules.default
         ];
       };
+      nixosConfigurations.apprentice = nixpkgs.lib.nixosSystem {
+        specialArgs = {
+          inherit inputs;
+        };
+        modules = [
+          ./hosts/common_configuration.nix
+          ./hosts/apprentice/configuration.nix
+          ./hosts/apprentice/hardware-configuration.nix
+          inputs.home-manager.nixosModules.default
+        ];
+      };
+
     };
 }

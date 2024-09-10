@@ -1,12 +1,10 @@
 {
-  config,
   pkgs,
-  inputs,
   ...
 }:
 
 {
-  imports = [ ../../modules/home-manager/alacritty.nix ];
+  imports = [ ../modules/home-manager/alacritty.nix ];
 
   home.username = "nik";
   home.homeDirectory = "/home/nik";
