@@ -196,4 +196,4 @@ gaps inner 5px
 
 exec --no-startup-id compton
 exec /home/nik/.screenlayout/runesmith.sh;/home/nik/.config/polybar/launch_polybar.sh
-exec_always /home/nik/.fehbg & 
+exec_always /home/nik/.config/fehbg/fehbg & 
