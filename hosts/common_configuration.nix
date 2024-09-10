@@ -15,8 +15,6 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "runesmith"; # Define your hostname.
-
   # Configure keymap in X11
   services.xserver = {
     enable = true;
