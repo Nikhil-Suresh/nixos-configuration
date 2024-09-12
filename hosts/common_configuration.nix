@@ -104,6 +104,12 @@
   programs.steam.gamescopeSession.enable = true;
   programs.gamemode.enable = true;
 
+  # Set clock to local time for Windows dual boots.
+  time.hardwareClockInLocalTime = true;
+
+  # Virtualization
+  virtualisation.docker.enable = true;
+
   # Help with non-Nix binaries for Neovim.
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
@@ -119,6 +125,7 @@
     cargo
     clang
     discord
+    docker
     dolphin
     dunst
     feh
