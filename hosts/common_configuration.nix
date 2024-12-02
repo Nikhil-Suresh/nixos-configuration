@@ -165,6 +165,7 @@
     winetricks
     xclip
     xsel
+    zed-editor
   ];
 
   fonts.packages = with pkgs; [ terminus-nerdfont font-awesome ];
@@ -174,6 +175,22 @@
     defaultEditor = true;
     viAlias = true;
     vimAlias = true;
+  };
+
+  programs.tmux = {
+    enable = true;
+    clock24 = true;
+    plugins = [
+      pkgs.tmuxPlugins.sensible
+      pkgs.tmuxPlugins.vim-tmux-navigator
+    ];
+    extraConfig = ''
+      set -g @vim_navigator_mapping_left "C-Left C-h"  # use C-h and C-Left
+      set -g @vim_navigator_mapping_right "C-Right C-l"
+      set -g @vim_navigator_mapping_up "C-k"
+      set -g @vim_navigator_mapping_down "C-j"
+      set -g @vim_navigator_mapping_prev ""  # removes the C-\ binding
+    '';
   };
 
   xdg.portal.enable = true;
