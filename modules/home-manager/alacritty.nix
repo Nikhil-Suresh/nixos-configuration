@@ -26,7 +26,7 @@
         };
         size = 18;
       };
-      shell.program = "fish";
+      terminal.shell.program = "zsh";
     };
   };
 }

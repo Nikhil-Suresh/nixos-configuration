@@ -93,6 +93,7 @@
       "nik" = import ./home.nix;
     };
     useGlobalPkgs = true;
+    backupFileExtension = "backup";
   };
 
   # Allow unfree packages
@@ -128,6 +129,7 @@
     docker
     dolphin
     dunst
+    elixir
     feh
     firefox
     fish
@@ -147,6 +149,7 @@
     mako
     networkmanagerapplet
     nodejs_22
+    oh-my-zsh
     pavucontrol
     pinta
     polybarFull
@@ -166,6 +169,7 @@
     xclip
     xsel
     zed-editor
+    zsh
   ];
 
   fonts.packages = with pkgs; [ terminus-nerdfont font-awesome ];

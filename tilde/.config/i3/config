@@ -194,6 +194,10 @@ bindsym $mod+Shift+p exec systemctl --user restart pulseaudio.service
 # Add some gaps between windows.
 gaps inner 5px
 
+workspace 3 output HDMI-0
+workspace 2 output DP-2
+workspace 1 output DP-5
+
 exec --no-startup-id compton
 exec /home/nik/.screenlayout/runesmith.sh;/home/nik/.config/polybar/launch_polybar.sh
 exec_always /home/nik/.config/fehbg/fehbg & 
