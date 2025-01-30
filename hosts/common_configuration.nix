@@ -134,6 +134,7 @@
     firefox
     fish
     flameshot
+    fzf
     git
     go
     google-chrome
@@ -147,6 +148,7 @@
     libsForQt5.konsole
     lua
     mako
+    mudlet
     networkmanagerapplet
     nodejs_22
     oh-my-zsh
