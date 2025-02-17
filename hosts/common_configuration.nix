@@ -144,6 +144,7 @@
     jellyfin-web
     jellyfin-ffmpeg
     jump
+    jq
     keymapp
     libreoffice-still
     libnotify
@@ -180,7 +181,7 @@
     zsh
   ];
 
-  fonts.packages = with pkgs; [ terminus-nerdfont font-awesome ];
+  fonts.packages = with pkgs; [ nerd-fonts.terminess-ttf font-awesome ];
 
   programs.neovim = {
     enable = true;
