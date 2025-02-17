@@ -166,6 +166,7 @@
     slack
     spotify
     swww
+    terraform
     unzip
     via
     vim
