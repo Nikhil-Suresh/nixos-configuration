@@ -139,6 +139,9 @@
     go
     google-chrome
     home-manager
+    jellyfin
+    jellyfin-web
+    jellyfin-ffmpeg
     jump
     keymapp
     libreoffice-still
