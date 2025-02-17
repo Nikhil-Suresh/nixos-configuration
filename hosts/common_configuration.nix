@@ -175,6 +175,7 @@
     xclip
     xsel
     zed-editor
+    zerotierone
     zsh
   ];
 
@@ -239,4 +240,7 @@
 
   # Flatpak.
   services.flatpak.enable = true;
+
+  services.zerotierone.enable = true;
+  services.zerotierone.port = 9993;
 }
