@@ -120,6 +120,7 @@
 
   # List packages installed in system profile. To search, run: $ nix search wget
   environment.systemPackages = with pkgs; [
+    awscli2
     bitwarden-cli
     bitwarden-desktop
     cachix
