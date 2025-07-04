@@ -94,8 +94,8 @@ window#waybar.hidden {
 }
 
 #clock {
-    background-color: #FA8BFF;
-    background-image: linear-gradient(-45deg, #FA8BFF 0%, #2BD2FF 52%, #2BD2FF 90%);
+    background-color: #206308;
+    background-image: linear-gradient(-45deg, #206308 0%, #41BA14 52%, #41BA14 90%);
     color: black;
     border-radius: 0px 20px 20px 0px;
     margin-right: 4px;
@@ -135,19 +135,19 @@ label:focus {
 
 #cpu {
     background-color: #FA8BFF;
-    background-image: linear-gradient(45deg, #2BD2FF 0%, #2BD2FF 52%, #2BD2FF 90%);
+    background-image: linear-gradient(-45deg, #41BA14 0%, #41BA14 52%, #41BA14 90%);
     color: black;
 }
 
 #memory {
     background-color: #FA8BFF;
-    background-image: linear-gradient(45deg, #2BD2FF 0%, #2BD2FF 52%, #2BD2FF 90%);
+    background-image: linear-gradient(-45deg, #41BA14 0%, #41BA14 52%, #41BA14 90%);
     color: black;
 }
 
 #disk {
     background-color: #FA8BFF;
-    background-image: linear-gradient(45deg, #2BD2FF 0%, #2BD2FF 52%, #2BD2FF 90%);
+    background-image: linear-gradient(-45deg, #41BA14 0%, #41BA14 52%, #41BA14 90%);
     color: black;
 }
 
@@ -157,31 +157,33 @@ label:focus {
 
 #network {
     background-color: #FA8BFF;
-    background-image: linear-gradient(45deg, #2BD2FF 0%, #2BD2FF 52%, #2BD2FF 90%);
+    background-image: linear-gradient(-45deg, #41BA14 0%, #41BA14 52%, #206308 90%);
     color: black;
+    border-radius: 20px 0px 0px 20px;
 }
 
 #network.disconnected {
     background-color: #FA8BFF;
-    background-image: linear-gradient(45deg, #2BD2FF 0%, #2BD2FF 52%, #2BD2FF 90%);
+    background-image: linear-gradient(-45deg, #41BA14 0%, #41BA14 52%, #206308 90%);
     color: red;
+    border-radius: 20px 0px 0px 20px;
 }
 
 #pulseaudio {
     background-color: #FA8BFF;
-    background-image: linear-gradient(45deg, #2BD2FF 0%, #2BD2FF 52%, #2BD2FF 90%);
+    background-image: linear-gradient(-45deg, #41BA14 0%, #41BA14 52%, #41BA14 90%);
     color: black;
 }
 
 #pulseaudio.muted {
     background-color: #FA8BFF;
-    background-image: linear-gradient(45deg, #2BD2FF 0%, #2BD2FF 52%, #2BD2FF 90%);
+    background-image: linear-gradient(-45deg, #41BA14 0%, #41BA14 52%, #41BA14 90%);
     color: red;
 }
 
 #custom-media {
     background-color: #8EC5FC;
-    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    background-image: linear-gradient(-45deg, #41BA14 0%, #41BA14 52%, #41BA14 90%);
     color: black;
     border-radius: 20px;
     margin-right: 5px;
@@ -252,7 +254,7 @@ label:focus {
 
 #temperature {
     background-color: #FA8BFF;
-    background-image: linear-gradient(-45deg, #FA8BFF 0%, #2BD2FF 52%, #2BD2FF 90%);
+    background-image: linear-gradient(-45deg, #206308 0%, #41BA14 52%, #41BA14 90%);
     color: black;
     border-radius: 0px 20px 20px 0px;
 }
@@ -263,7 +265,7 @@ label:focus {
 
 #tray {
     background-color: #FA8BFF;
-    background-image: linear-gradient(-45deg, #2BD2FF 0%, #2BD2FF 52%, #2BD2FF 90%);
+    background-image: linear-gradient(-45deg, #41BA14 0%, #41BA14 52%, #41BA14 90%);
     color: black;
 }
 
@@ -283,7 +285,7 @@ label:focus {
 
 #idle_inhibitor {
     background-color: #FA8BFF;
-    background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BD2FF 90%);
+    background-image: linear-gradient(-45deg, #41BA14 0%, #41BA14 52%, #206308 90%);
     border-radius: 20px 0px 0px 20px;
 
 }
