@@ -11,6 +11,7 @@ dotfiles=(
   .config/i3
   .config/polybar
   .config/fehbg
+  .config/hypr
 )
 
 for dotfile in "${dotfiles[@]}"; do
