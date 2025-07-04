@@ -12,6 +12,7 @@ dotfiles=(
   .config/polybar
   .config/fehbg
   .config/hypr
+  .config/ghostty
 )
 
 for dotfile in "${dotfiles[@]}"; do
