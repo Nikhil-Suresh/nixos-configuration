@@ -116,6 +116,7 @@
     discord
     docker
     kdePackages.dolphin
+    kdePackages.konsole
     elixir
     feh
     firefox
@@ -159,6 +160,7 @@
     vscode
     waybar
     winetricks
+    wl-clipboard
     xclip
     xsel
     zed-editor
