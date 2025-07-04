@@ -16,29 +16,13 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Configure keymap in X11
-  services.xserver = {
+  
+  programs.hyprland = {
     enable = true;
-    xkb.layout = "au";
-    xkb.variant = "";
-    desktopManager = {
-      xterm.enable = false;
-      xfce = {
-        enable = true;
-        noDesktop = true;
-        enableXfwm = false;
-      };
-    };
-    windowManager.i3 = {
-      enable = true;
-      extraPackages = with pkgs; [
-        dmenu
-        i3status
-        i3lock
-        i3blocks
-      ];
-    };
+    xwayland.enable = true;
   };
-  services.displayManager.defaultSession = "xfce+i3";
+
+  services.displayManager.defaultSession = "hyprland";
   services.picom.enable = true;
 
   networking.nameservers = [
@@ -128,21 +112,18 @@
     clang
     discord
     docker
-    dolphin
-    dunst
+    kdePackages.dolphin
     elixir
     feh
     firefox
     fish
     flameshot
     fzf
+    ghostty
     git
     go
     google-chrome
     home-manager
-    jellyfin
-    jellyfin-web
-    jellyfin-ffmpeg
     jump
     jq
     keymapp
@@ -173,11 +154,11 @@
     via
     vim
     vscode
+    waybar
     winetricks
     xclip
     xsel
     zed-editor
-    zerotierone
     zsh
   ];
 
