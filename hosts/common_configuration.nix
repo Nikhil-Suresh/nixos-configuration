@@ -121,13 +121,13 @@
     feh
     firefox
     fish
-    flameshot
     fzf
     ghostty
     git
     go
     google-chrome
     home-manager
+    hyprshot
     jump
     jq
     keymapp
