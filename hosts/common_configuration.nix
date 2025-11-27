@@ -202,6 +202,8 @@
       set-window-option -g pane-base-index 1
       set-option -g renumber-windows on
       set -g mouse on
+      bind '"' split-window -v -c "#{pane_current_path}"
+      bind % split-window -h -c "#{pane_current_path}"
     '';
   };
 
