@@ -184,6 +184,7 @@
       pkgs.tmuxPlugins.sensible
       pkgs.tmuxPlugins.vim-tmux-navigator
       pkgs.tmuxPlugins.tokyo-night-tmux
+      pkgs.tmuxPlugins.yank
     ];
     extraConfig = ''
       set -g @vim_navigator_mapping_left "C-Left C-h"  # use C-h and C-Left
@@ -200,6 +201,7 @@
       set -g pane-base-index 1
       set-window-option -g pane-base-index 1
       set-option -g renumber-windows on
+      set -g mouse on
     '';
   };
 
