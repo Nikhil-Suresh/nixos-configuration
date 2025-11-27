@@ -11,3 +11,10 @@ The `flake.nix` has setups for my desktop and laptop that can be modified for yo
 For example, to create a setup that mimics my desktop, run:
 
 `sudo nixos-rebuild switch --flake ~/nixos-configuration/#runesmith`
+
+A couple of the dotfiles are managed by uh, normal dotfiles because my NixOS brain was originally too small to do things the "right" way. I've borrowed Victor Engmark's `tilde` package to symlink dotfiles into the right spot. So:
+
+`cd tilde`
+`./install.bash`
+
+And then you can reboot and theoretically everything is good!
