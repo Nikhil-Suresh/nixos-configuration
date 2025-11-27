@@ -139,6 +139,7 @@
     libsForQt5.konsole
     lua
     mako
+    mpvpaper
     mudlet
     networkmanagerapplet
     nodejs_22
