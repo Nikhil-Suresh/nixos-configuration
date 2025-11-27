@@ -183,6 +183,7 @@
     plugins = [
       pkgs.tmuxPlugins.sensible
       pkgs.tmuxPlugins.vim-tmux-navigator
+      pkgs.tmuxPlugins.tokyo-night-tmux
     ];
     extraConfig = ''
       set -g @vim_navigator_mapping_left "C-Left C-h"  # use C-h and C-Left
