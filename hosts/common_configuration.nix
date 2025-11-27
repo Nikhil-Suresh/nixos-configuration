@@ -126,6 +126,7 @@
     git
     go
     google-chrome
+    helix
     home-manager
     hyprshot
     jump
@@ -189,6 +190,11 @@
       set -g @vim_navigator_mapping_up "C-k"
       set -g @vim_navigator_mapping_down "C-j"
       set -g @vim_navigator_mapping_prev ""  # removes the C-\ binding
+      bind -n M-H previous-window
+      bind -n M-L next-window
+      unbind C-b
+      set -g prefix C-space
+      bind C-space send-prefix
     '';
   };
 
